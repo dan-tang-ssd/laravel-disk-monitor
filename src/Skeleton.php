@@ -1,7 +1,7 @@
 <?php
 
-namespace VendorName\Skeleton;
+namespace Spatie\LaravelDiskMonitor;
 
-class Skeleton
+class LaravelDiskMonitor
 {
 }

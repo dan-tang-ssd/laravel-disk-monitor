@@ -1,17 +1,17 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "spatie/laravel-disk-monitor",
+    "description": "Monitor metrics of Laravel disks",
     "keywords": [
-        ":vendor_name",
+        "Spatie",
         "laravel",
-        ":package_slug"
+        "laravel-disk-monitor"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/spatie/laravel-disk-monitor",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Dan Tang",
+            "email": "dan@stats4sd.org",
             "role": "Developer"
         }
     ],
@@ -30,13 +30,13 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
+            "Spatie\\LaravelDiskMonitor\\": "src",
+            "Spatie\\LaravelDiskMonitor\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "Spatie\\LaravelDiskMonitor\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -49,10 +49,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "Spatie\\LaravelDiskMonitor\\LaravelDiskMonitorServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\SkeletonFacade"
+                "LaravelDiskMonitor": "Spatie\\LaravelDiskMonitor\\LaravelDiskMonitorFacade"
             }
         }
     },

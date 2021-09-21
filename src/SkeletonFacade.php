@@ -1,16 +1,16 @@
 <?php
 
-namespace VendorName\Skeleton;
+namespace Spatie\LaravelDiskMonitor;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \VendorName\Skeleton\Skeleton
+ * @see \Spatie\LaravelDiskMonitor\LaravelDiskMonitor
  */
-class SkeletonFacade extends Facade
+class LaravelDiskMonitorFacade extends Facade
 {
     protected static function getFacadeAccessor()
     {
-        return 'skeleton';
+        return 'laravel-disk-monitor';
     }
 }
