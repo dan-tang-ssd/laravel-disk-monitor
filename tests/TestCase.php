@@ -26,11 +26,16 @@ class TestCase extends Orchestra
 
     public function getEnvironmentSetUp($app)
     {
-        config()->set('database.default', 'testing');
+        config()->set('database.default', 'sqlite');
+        config()->set('database.connections.sqlite', [
+            'driver' => 'sqlite',
+            'database' => ':memory:',
+            'prefix' => '',
+        ]);
 
-        /*
-        $migration = include __DIR__.'/../database/migrations/create_laravel-disk-monitor_table.php.stub';
+        
+        $migration = include __DIR__.'/../database/migrations/create_laravel-disk-monitor_tables.php.stub';
         $migration->up();
-        */
+        
     }
 }
