@@ -35,13 +35,12 @@ class RecordDiskMetricsCommand extends Command
         */
 
         collect(config('disk-monitor.disk_names'))
-            ->each(fn(string $diskName) => $this->recordMetrics($diskName));
+            ->each(fn (string $diskName) => $this->recordMetrics($diskName));
 
         // it is good to have "All done" at the end of command, so I know it reached the end
         // use exclaimation mark ! to indicate it is now done
         $this->comment('All done!');
     }
-
 
     protected function recordMetrics(string $diskName): void
     {
@@ -55,7 +54,5 @@ class RecordDiskMetricsCommand extends Command
             'disk_name' => $diskName,
             'file_count' => $fileCount,
         ]);
-
     }
-
 }

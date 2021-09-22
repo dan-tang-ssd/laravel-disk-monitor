@@ -2,6 +2,7 @@
 
 namespace Spatie\LaravelDiskMonitor\Tests;
 
+use Illuminate\Routing\Route;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
 use Spatie\LaravelDiskMonitor\LaravelDiskMonitorServiceProvider;
@@ -15,6 +16,10 @@ class TestCase extends Orchestra
         Factory::guessFactoryNamesUsing(
             fn (string $modelName) => 'Spatie\\LaravelDiskMonitor\\Database\\Factories\\'.class_basename($modelName).'Factory'
         );
+
+        // register the new route
+        // 3 test cases failed after adding new route
+        //Route::diskMonitor('disk-monitor');
     }
 
     protected function getPackageProviders($app)
